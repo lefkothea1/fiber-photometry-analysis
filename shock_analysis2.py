@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import time
 
-
+print(os.system('ls'))
 
 def slash(operating_system):
     if operating_system == 1:
@@ -293,13 +293,13 @@ def shock_analysis(filename,directory):
     
     print('sending data to excel \n')
     
-     #Sends the Dataframes to Excel
-    writer = pd.ExcelWriter(directory+streep+filename[:-6]+'_RESULT.xlsx')
-    photoShock1.to_excel(writer,'shock_isosb', freeze_panes=(1,1) )
-    photoShock2.to_excel(writer,'shock_dLight', freeze_panes=(1,1))
-    photoShock_mc.to_excel(writer,'motion_corr', freeze_panes=(1,1))
-    shockTS.to_excel(writer,'Shock timestamps(sec)',  index_label='shock#')
-    writer.save() 
+#     #Sends the Dataframes to Excel
+#    writer = pd.ExcelWriter(directory+ filename[:-6]+'_RESULT.xlsx')
+#    photoShock1.to_excel(writer,'shock_isosb', freeze_panes=(1,1) )
+#    photoShock2.to_excel(writer,'shock_dLight', freeze_panes=(1,1))
+#    photoShock_mc.to_excel(writer,'motion_corr', freeze_panes=(1,1))
+#    shockTS.to_excel(writer,'Shock timestamps(sec)',  index_label='shock#')
+#    writer.save() 
     
 #    photoshock_all=pd.concat({'isosb':photoShock1,'gcamp':photoShock2},axis=1) trying to have 1muliindex df with both gcamp &isosb data
     return photoShock1, photoShock2
@@ -308,10 +308,11 @@ def shock_analysis(filename,directory):
     
     
  #changes directory to where the files to be read are-use double backslach *********************************************************************************************************************************
-dir1 = './data/raw'
-os.chdir (dir1)
+dir1 = './data/raw/'
+#os.chdir (dir1)
 #saving_dir=make_path(dir1, 'analysis')
 saving_dir='./results/output'
+#!1 for windows(returns//) and 2 for linux(returns/)
 streep=slash(1)
 batch_avg1=pd.DataFrame() #1 for isosbestic data. will contain the avg of all trials from all mice
 batch_avg2=pd.DataFrame() #2 for gcamp data.will contain the avg of all trials from all mice
