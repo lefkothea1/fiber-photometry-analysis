@@ -2,7 +2,53 @@
 
 Version 0.1.0
 
-alyses data obtained by fiber photometry, by timelocking them to a TTL pulse
+analyses data obtained by fiber photometry (Doric Lesnses) in 2 different channels, by timelocking them to a TTL pulse (medPC generated) that is on a 3rd channel
+
+#Code summary:
+uses input file that has a time column, brain data in 2 different channels (channel 1 and 2 ) and TTL pulses in channel 3 column. TTL channel column has binary data: either 3 (TTL off) or 0 (TTL on--> specific behavior taking place). 
+The shock script will timelock brain data (channel 1 and 2 ) around the time when TTL was on. Each time a TTL is on is a different trial.
+Average as well as SEM for all trials will be calculated for each channel. 
+It will plot individual trials as well as trial average+- SEM for each channel separately, allowing for visualisation of brain signal during a behavior.
+example plot:
+
+![exAvgPlotPic](https://github.com/lefkothea1/fiber-photometry-analysis/blob/main/docs/exAvgPlotPic.PNG)
+
+#requirements:
+This script was created in spyder v 3.3.6, using python  3.6.5 64-bit | Qt 5.9.6 | PyQt5 5.9.2 on  Windows 10 
+#How to install:
+
+1) download spyder software, by following the instructions on the link below. Spyder wil be the software used to run the code in.
+http://docs.spyder-ide.org/current/installation.html
+
+2)Download code from github
+from repository  
+lefkothea1 /fiber-photometry-analysis , clock on green "Code" button and select "download as zip"
+save the zip file, unzip in your computer using the available software.
+
+3) open spyder
+either drag and drop script "shock analysis2" into spyder or 
+open it by clicking file>open on spyder GUI
+click run or F5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Project organization
