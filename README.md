@@ -6,7 +6,8 @@ analyses data obtained by fiber photometry (Doric Lesnses) in 2 different channe
 
 ## Code summary
 
-uses input file that has a time column, brain data in 2 different channels (channel 1 and 2 ) and TTL pulses in channel 3 column. TTL channel column has binary data: either 3 (TTL off) or 0 (TTL on--> specific behavior taking place). 
+uses input file that has a time column, brain data in 2 different channels (channel 1 and 2 ) and TTL pulses in channel 3 column. 
+TTL channel column has binary data: either 3 (TTL off) or 0 (TTL on--> specific behavior taking place). 
 The shock script will timelock brain data (channel 1 and 2 ) around the time when TTL was on. Each time a TTL is on is a different trial.
 Average as well as SEM for all trials will be calculated for each channel. 
 It will plot individual trials as well as trial average+- SEM for each channel separately, allowing for visualisation of brain signal during a behavior.
@@ -14,11 +15,25 @@ It will plot individual trials as well as trial average+- SEM for each channel s
 *example plot:*
 ![exAvgPlotPic](https://github.com/lefkothea1/fiber-photometry-analysis/blob/main/docs/exAvgPlotPic.PNG)
 
+## important info about script contents:
+time is measured as samples/sec. 
+this script works for aquisition rate 12kP/sec, and decimation 50 (every 50 values will be averaged in order to minimize file size)
+this results in 230-240 points per sec
+
+to define how much time before and after the onset of TTL/behavior you want to include in trials
+
+
 ### requirements:
 This script was created in spyder v 3.3.6, using python  3.6.5 64-bit | Qt 5.9.6 | PyQt5 5.9.2 on  Windows 10 
+
 ### Dependencies:
-pandas_v0.24.0
-numpy_v1.19.2
+* modules used:
+  * pandas_v0.24.0
+  * numpy_v1.19.2
+  * matplotlib_v3.3.2
+  * os
+  * time
+
 for complete list of all dependecies in the environment that script was created look at *docs/reports/environment dependencies for full environment reproducibility*
 
 ## How to install:
