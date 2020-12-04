@@ -4,17 +4,17 @@ Version 0.1.0
 
 analyses data obtained by fiber photometry (Doric Lesnses) in 2 different channels, by timelocking them to a TTL pulse (medPC generated) that is on a 3rd channel
 
-#Code summary
+## Code summary
 
 uses input file that has a time column, brain data in 2 different channels (channel 1 and 2 ) and TTL pulses in channel 3 column. TTL channel column has binary data: either 3 (TTL off) or 0 (TTL on--> specific behavior taking place). 
 The shock script will timelock brain data (channel 1 and 2 ) around the time when TTL was on. Each time a TTL is on is a different trial.
 Average as well as SEM for all trials will be calculated for each channel. 
 It will plot individual trials as well as trial average+- SEM for each channel separately, allowing for visualisation of brain signal during a behavior.
-example plot:
 
+*example plot:*
 ![exAvgPlotPic](https://github.com/lefkothea1/fiber-photometry-analysis/blob/main/docs/exAvgPlotPic.PNG)
 
-#requirements:
+### requirements:
 This script was created in spyder v 3.3.6, using python  3.6.5 64-bit | Qt 5.9.6 | PyQt5 5.9.2 on  Windows 10 
 #How to install:
 
