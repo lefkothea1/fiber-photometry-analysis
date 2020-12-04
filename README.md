@@ -16,6 +16,10 @@ It will plot individual trials as well as trial average+- SEM for each channel s
 
 ### requirements:
 This script was created in spyder v 3.3.6, using python  3.6.5 64-bit | Qt 5.9.6 | PyQt5 5.9.2 on  Windows 10 
+### Dependencies:
+pandas_v0.24.0
+numpy_v1.19.2
+for complete list of all dependecies in the environment that script was created look at *docs/reports/environment dependencies for full environment reproducibility*
 
 ## How to install:
 
