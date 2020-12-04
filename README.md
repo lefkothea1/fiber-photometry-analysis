@@ -4,7 +4,8 @@ Version 0.1.0
 
 analyses data obtained by fiber photometry (Doric Lesnses) in 2 different channels, by timelocking them to a TTL pulse (medPC generated) that is on a 3rd channel
 
-#Code summary:
+#Code summary
+
 uses input file that has a time column, brain data in 2 different channels (channel 1 and 2 ) and TTL pulses in channel 3 column. TTL channel column has binary data: either 3 (TTL off) or 0 (TTL on--> specific behavior taking place). 
 The shock script will timelock brain data (channel 1 and 2 ) around the time when TTL was on. Each time a TTL is on is a different trial.
 Average as well as SEM for all trials will be calculated for each channel. 
