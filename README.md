@@ -16,7 +16,8 @@ It will plot individual trials as well as trial average+- SEM for each channel s
 
 ### requirements:
 This script was created in spyder v 3.3.6, using python  3.6.5 64-bit | Qt 5.9.6 | PyQt5 5.9.2 on  Windows 10 
-#How to install:
+
+## How to install:
 
 1) download spyder software, by following the instructions on the link below. Spyder wil be the software used to run the code in.
 http://docs.spyder-ide.org/current/installation.html
@@ -30,26 +31,6 @@ save the zip file, unzip in your computer using the available software.
 either drag and drop script "shock analysis2" into spyder or 
 open it by clicking file>open on spyder GUI
 click run or F5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Project organization
